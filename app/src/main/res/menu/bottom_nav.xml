@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home" android:icon="@drawable/ic_home" android:id="@id/homeFragment"/>
+    <item android:title="Popular"  android:icon="@drawable/ic_popular"  android:id="@id/popularFragment"/>
+    <item android:title="Top rated" android:icon="@drawable/ic_top" android:id="@id/topMovieFragment" />
+    <item android:title="Up coming" android:icon="@drawable/ic_comming" android:id="@id/comingFragment" />
+</menu>

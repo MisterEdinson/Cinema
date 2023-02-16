@@ -1,4 +1,4 @@
-package com.example.task_tmdb.ui.screens.home
+package com.example.task_tmdb.ui.screens.comingMovie
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,13 +7,12 @@ import com.example.task_tmdb.app.model.Response
 import com.example.task_tmdb.app.repository.Repository
 import kotlinx.coroutines.launch
 
-class HomeViewModel(private val repository: Repository) : ViewModel() {
-
+class ComingViewModel(private var repository: Repository) : ViewModel() {
     val repoCustom: MutableLiveData<Response> = MutableLiveData()
 
     fun getMoviewCustomModel() {
         viewModelScope.launch {
-            val responce: Response = repository.getCustomMovieRepo()
+            val responce: Response = repository.getComingMovieRepo()
             repoCustom.value = responce
         }
     }

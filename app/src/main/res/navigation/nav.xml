@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
@@ -9,16 +10,28 @@
         android:id="@+id/homeFragment"
         android:name="com.example.task_tmdb.ui.screens.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_movieDetailFragment"
             app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_popularFragment"
+            app:destination="@id/popularFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_comingFragment"
+            app:destination="@id/comingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_topMovieFragment"
+            app:destination="@id/topMovieFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
         android:name="com.example.task_tmdb.ui.screens.movieDetail.MovieDetailFragment"
         android:label="fragment_movie_detail"
-        tools:layout="@layout/fragment_movie_detail" >
+        tools:layout="@layout/fragment_movie_detail">
         <action
             android:id="@+id/action_movieDetailFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -27,20 +40,36 @@
         android:id="@+id/artistDetailFragment"
         android:name="com.example.task_tmdb.ui.screens.artistDetail.ArtistDetailFragment"
         android:label="fragment_artist_detail"
-        tools:layout="@layout/fragment_artist_detail" />
+        tools:layout="@layout/fragment_artist_detail">
+        <action
+            android:id="@+id/action_artistDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/comingFragment"
         android:name="com.example.task_tmdb.ui.screens.comingMovie.ComingFragment"
         android:label="fragment_coming"
-        tools:layout="@layout/fragment_coming" />
+        tools:layout="@layout/fragment_coming">
+        <action
+            android:id="@+id/action_comingFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/popularFragment"
         android:name="com.example.task_tmdb.ui.screens.popular.PopularFragment"
         android:label="fragment_popular"
-        tools:layout="@layout/fragment_popular" />
+        tools:layout="@layout/fragment_popular">
+        <action
+            android:id="@+id/action_popularFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/topMovieFragment"
         android:name="com.example.task_tmdb.ui.screens.top.TopMovieFragment"
         android:label="fragment_top_movie"
-        tools:layout="@layout/fragment_top_movie" />
+        tools:layout="@layout/fragment_top_movie">
+        <action
+            android:id="@+id/action_topMovieFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

@@ -17,13 +17,4 @@
         android:src="@drawable/avatar"
         android:contentDescription="@string/desc" />
 
-    <Button
-        android:id="@+id/btnClickDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="@string/detail"
-        app:layout_constraintBottom_toBottomOf="@+id/imgRv"
-        app:layout_constraintEnd_toEndOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,9 @@
     <string name="popular">Popular</string>
     <string name="top_rated">Top rated</string>
     <string name="up_coming">Up coming</string>
+    <string name="language">Language</string>
+    <string name="reuting">Reuting</string>
+    <string name="duration">Duration</string>
+    <string name="release_data">Release Data</string>
+    <string name="todo">TODO</string>
 </resources>

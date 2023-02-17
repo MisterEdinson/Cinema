@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.screens.movieDetail.MovieDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imgDetailsBack"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ava"
+            app:layout_constraintBottom_toBottomOf="@+id/imgDetailPoster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgDetailPoster"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:id="@+id/imgDetailPoster"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tvDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            tools:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetailPoster" />
+
+        <TextView
+            android:id="@+id/tvDetailsLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            tools:text="en"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/tvDetailsReuting"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsTitle" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/language"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsLanguage" />
+
+        <TextView
+            android:id="@+id/tvDetailsDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:text="After a heroic job of successfully landing his storm-damaged aircraft in a war zone, a fearless pilot finds himself between the agendas of multiple militias planning to take the plane and its passengers hostage." />
+
+        <TextView
+            android:id="@+id/tvDetailsReuting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="7.9"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetailsLanguage"
+            app:layout_constraintEnd_toStartOf="@+id/tvDetailsDuration"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailsLanguage"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailsLanguage" />
+
+        <TextView
+            android:id="@+id/tvDetailsDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="2h 52m"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetailsReuting"
+            app:layout_constraintEnd_toStartOf="@+id/tvDetailsRelease"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailsReuting"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailsReuting" />
+
+        <TextView
+            android:id="@+id/tvDetailsRelease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            tools:text="2020-11-02"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDetailsDuration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailsDuration"
+            app:layout_constraintTop_toTopOf="@+id/tvDetailsDuration" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reuting"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDetailsReuting"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsReuting" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDetailsDuration"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsDuration" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/release_data"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDetailsRelease"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsRelease" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
